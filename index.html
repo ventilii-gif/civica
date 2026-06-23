@@ -20,70 +20,43 @@
       <span class="brand-title" data-i18n="appTitle">Cittadini Consapevoli</span>
     </div>
     <nav class="header-controls" aria-label="Controlli globali">
-      <!-- Selettore lingua -->
       <div class="lang-switcher" role="group" aria-label="Lingua / Language / Idioma">
         <button class="lang-btn active" data-lang-target="it" aria-pressed="true">IT</button>
         <button class="lang-btn" data-lang-target="en" aria-pressed="false">EN</button>
         <button class="lang-btn" data-lang-target="pt" aria-pressed="false">PT</button>
       </div>
-      <!-- Toggle dark mode -->
       <button class="theme-toggle" id="themeToggle" aria-label="Attiva modalità scura" title="Modalità scura">
         <span class="theme-icon">🌙</span>
       </button>
     </nav>
   </div>
-  <!-- Barra di progresso percorso -->
   <div class="progress-bar-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Avanzamento percorso">
     <div class="progress-bar-fill" id="progressFill"></div>
   </div>
 </header>
 
-<!-- ===== CIVIC PATH (navigazione tappe) ===== -->
+<!-- ===== CIVIC PATH ===== -->
 <nav class="civic-path" id="civicPath" aria-label="Tappe del percorso">
   <div class="path-inner">
-    <button class="step-btn active" data-step="0" aria-current="step">
-      <span class="step-icon">🏛️</span>
-      <span class="step-label" data-i18n="step0">Introduzione</span>
-    </button>
+    <button class="step-btn active" data-step="0" aria-current="step"><span class="step-icon">🏛️</span><span class="step-label" data-i18n="step0">Introduzione</span></button>
     <div class="step-connector" aria-hidden="true"></div>
-    <button class="step-btn" data-step="1">
-      <span class="step-icon">📜</span>
-      <span class="step-label" data-i18n="step1">Costituzione</span>
-    </button>
+    <button class="step-btn" data-step="1"><span class="step-icon">📜</span><span class="step-label" data-i18n="step1">Costituzione</span></button>
     <div class="step-connector" aria-hidden="true"></div>
-    <button class="step-btn" data-step="2">
-      <span class="step-icon">🇪🇺</span>
-      <span class="step-label" data-i18n="step2">Carta UE</span>
-    </button>
+    <button class="step-btn" data-step="2"><span class="step-icon">🇪🇺</span><span class="step-label" data-i18n="step2">Carta UE</span></button>
     <div class="step-connector" aria-hidden="true"></div>
-    <button class="step-btn" data-step="3">
-      <span class="step-icon">📖</span>
-      <span class="step-label" data-i18n="step3">Glossario</span>
-    </button>
+    <button class="step-btn" data-step="3"><span class="step-icon">📖</span><span class="step-label" data-i18n="step3">Glossario</span></button>
     <div class="step-connector" aria-hidden="true"></div>
-    <button class="step-btn" data-step="4">
-      <span class="step-icon">🎭</span>
-      <span class="step-label" data-i18n="step4">Scenari</span>
-    </button>
+    <button class="step-btn" data-step="4"><span class="step-icon">🎭</span><span class="step-label" data-i18n="step4">Scenari</span></button>
     <div class="step-connector" aria-hidden="true"></div>
-    <button class="step-btn" data-step="5">
-      <span class="step-icon">⚖️</span>
-      <span class="step-label" data-i18n="step5">Diritti e Doveri</span>
-    </button>
+    <button class="step-btn" data-step="5"><span class="step-icon">⚖️</span><span class="step-label" data-i18n="step5">Diritti e Doveri</span></button>
     <div class="step-connector" aria-hidden="true"></div>
-    <button class="step-btn" data-step="6">
-      <span class="step-icon">🧩</span>
-      <span class="step-label" data-i18n="step6">Quiz</span>
-    </button>
+    <button class="step-btn" data-step="6"><span class="step-icon">🧩</span><span class="step-label" data-i18n="step6">Quiz</span></button>
     <div class="step-connector" aria-hidden="true"></div>
-    <button class="step-btn" data-step="7">
-      <span class="step-icon">🏅</span>
-      <span class="step-label" data-i18n="step7">Riepilogo</span>
-    </button>
+    <button class="step-btn" data-step="7"><span class="step-icon">🏅</span><span class="step-label" data-i18n="step7">Riepilogo</span></button>
   </div>
 </nav>
 
-<!-- ===== CONTENUTO PRINCIPALE ===== -->
+<!-- ===== MAIN ===== -->
 <main class="main-content" id="mainContent" role="main">
 
   <!-- TAPPA 0: INTRODUZIONE -->
@@ -92,39 +65,27 @@
       <div class="module-hero">
         <div class="hero-badge">👋 <span data-i18n="welcome">Benvenuto</span></div>
         <h1 class="module-title" data-i18n="intro_title">Un viaggio nella cittadinanza</h1>
-        <p class="module-lead" data-i18n="intro_lead">Scopri i principi fondamentali che regolano la vita democratica in Italia e nell'Unione europea. Un percorso in 7 tappe, pensato per tutti.</p>
+        <p class="module-lead" data-i18n="intro_lead">Scopri i principi fondamentali che regolano la vita democratica in Italia e nell'Unione europea.</p>
         <div class="intro-cards">
-          <div class="intro-card">
-            <span class="intro-card-icon">📜</span>
-            <h3 data-i18n="intro_c1_title">Costituzione italiana</h3>
-            <p data-i18n="intro_c1_text">I principi fondamentali e i diritti dei cittadini italiani dal 1948.</p>
-          </div>
-          <div class="intro-card">
-            <span class="intro-card-icon">🇪🇺</span>
-            <h3 data-i18n="intro_c2_title">Carta dei diritti UE</h3>
-            <p data-i18n="intro_c2_text">I diritti fondamentali riconosciuti a tutti i cittadini europei dal 2000.</p>
-          </div>
-          <div class="intro-card">
-            <span class="intro-card-icon">🧩</span>
-            <h3 data-i18n="intro_c3_title">Percorso interattivo</h3>
-            <p data-i18n="intro_c3_text">Scenari pratici, glossario civico, quiz e riepilogo per consolidare la comprensione.</p>
-          </div>
+          <div class="intro-card"><span class="intro-card-icon">📜</span><h3 data-i18n="intro_c1_title">Costituzione italiana</h3><p data-i18n="intro_c1_text">I principi fondamentali e i diritti dei cittadini italiani dal 1948.</p></div>
+          <div class="intro-card"><span class="intro-card-icon">🇪🇺</span><h3 data-i18n="intro_c2_title">Carta dei diritti UE</h3><p data-i18n="intro_c2_text">I diritti fondamentali riconosciuti a tutti i cittadini europei dal 2000.</p></div>
+          <div class="intro-card"><span class="intro-card-icon">🧩</span><h3 data-i18n="intro_c3_title">Percorso interattivo</h3><p data-i18n="intro_c3_text">Scenari pratici, glossario civico, quiz e riepilogo per consolidare la comprensione.</p></div>
         </div>
         <div class="disclaimer-box" role="note">
           <span class="disclaimer-icon">ℹ️</span>
-          <p data-i18n="disclaimer">Questo percorso ha scopo educativo e divulgativo. Non costituisce consulenza legale né sostituisce le fonti ufficiali. Per informazioni normative precise, consulta sempre i testi ufficiali e professionisti qualificati.</p>
+          <p data-i18n="disclaimer">Questo percorso ha scopo educativo e divulgativo. Non costituisce consulenza legale né sostituisce le fonti ufficiali.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TAPPA 1: COSTITUZIONE ITALIANA -->
+  <!-- TAPPA 1: COSTITUZIONE -->
   <section class="module hidden" id="module-1" data-module="1">
     <div class="module-inner">
       <div class="module-header">
         <span class="module-badge">📜</span>
         <h2 class="module-title" data-i18n="const_title">La Costituzione italiana</h2>
-        <p class="module-lead" data-i18n="const_lead">Approvata il 22 dicembre 1947 ed entrata in vigore il 1° gennaio 1948, è la legge fondamentale dello Stato. Qui trovi i principi chiave spiegati in modo semplice.</p>
+        <p class="module-lead" data-i18n="const_lead">Approvata il 22 dicembre 1947 ed entrata in vigore il 1° gennaio 1948. Clicca su una scheda per approfondire.</p>
       </div>
       <div class="article-grid" id="constitutionGrid"></div>
     </div>
@@ -136,11 +97,11 @@
       <div class="module-header">
         <span class="module-badge">🇪🇺</span>
         <h2 class="module-title" data-i18n="eu_title">La Carta dei diritti fondamentali dell'UE</h2>
-        <p class="module-lead" data-i18n="eu_lead">Proclamata nel 2000 e giuridicamente vincolante dal 2009 con il Trattato di Lisbona, raccoglie in sette titoli i diritti fondamentali dell'Unione europea.</p>
+        <p class="module-lead" data-i18n="eu_lead">Proclamata nel 2000 e vincolante dal 2009. Clicca su una carta per confrontarla con la Costituzione italiana.</p>
       </div>
       <div class="eu-categories" id="euCategories"></div>
       <div class="comparison-box" id="comparisonBox">
-        <h3 data-i18n="compare_title">Confronta: Costituzione italiana vs Carta UE</h3>
+        <h3 data-i18n="compare_title">Confronto: Costituzione italiana vs Carta UE</h3>
         <p data-i18n="compare_text">Clicca su un diritto nella Carta UE per vedere il principio corrispondente nella Costituzione italiana.</p>
         <div class="comparison-result" id="comparisonResult" hidden></div>
       </div>
@@ -156,8 +117,8 @@
         <p class="module-lead" data-i18n="gloss_lead">Termini fondamentali per orientarsi nel linguaggio della cittadinanza democratica.</p>
       </div>
       <div class="glossary-search">
-        <label for="glossSearch" class="sr-only" data-i18n="gloss_search_label">Cerca nel glossario</label>
-        <input type="search" id="glossSearch" class="gloss-input" data-i18n-placeholder="gloss_search_ph" placeholder="Cerca un termine..." aria-label="Cerca nel glossario">
+        <label for="glossSearch" class="sr-only">Cerca nel glossario</label>
+        <input type="search" id="glossSearch" class="gloss-input" placeholder="Cerca un termine..." data-i18n-placeholder="gloss_search_ph" aria-label="Cerca nel glossario">
       </div>
       <div class="glossary-grid" id="glossaryGrid"></div>
     </div>
@@ -186,23 +147,23 @@
       <div class="module-header">
         <span class="module-badge">⚖️</span>
         <h2 class="module-title" data-i18n="game_title">Diritti e Doveri</h2>
-        <p class="module-lead" data-i18n="game_lead">Trascina ogni carta nella categoria corretta: Diritto o Dovere.</p>
+        <p class="module-lead" data-i18n="game_lead">Clicca su una carta per spostarla nella categoria corretta: Diritto o Dovere.</p>
       </div>
       <div class="game-area" id="gameArea">
         <div class="cards-pool" id="cardsPool"></div>
         <div class="drop-zones">
-          <div class="drop-zone" id="dropRights" data-type="right" role="region" aria-label="Diritti">
+          <div class="drop-zone" id="dropRights" role="region" aria-label="Diritti">
             <div class="drop-zone-header">⚡ <span data-i18n="rights">Diritti</span></div>
             <div class="drop-zone-content" id="droppedRights"></div>
           </div>
-          <div class="drop-zone" id="dropDuties" data-type="duty" role="region" aria-label="Doveri">
+          <div class="drop-zone" id="dropDuties" role="region" aria-label="Doveri">
             <div class="drop-zone-header">🤝 <span data-i18n="duties">Doveri</span></div>
             <div class="drop-zone-content" id="droppedDuties"></div>
           </div>
         </div>
       </div>
       <div class="game-feedback" id="gameFeedback" hidden></div>
-      <button class="btn btn-primary" id="checkGame" data-i18n="check_answers">Verifica le risposte</button>
+      <button class="btn btn-primary" id="checkGame" data-i18n="check_answers" style="margin-top:1rem">Verifica le risposte</button>
     </div>
   </section>
 
@@ -246,21 +207,22 @@
 
 </main>
 
-<!-- ===== NAVIGAZIONE MODULI ===== -->
+<!-- ===== NAV MODULI ===== -->
 <div class="module-nav" role="navigation" aria-label="Navigazione moduli">
-  <button class="btn btn-secondary" id="prevModule" aria-label="Modulo precedente" disabled>
-    ← <span data-i18n="prev_module">Precedente</span>
-  </button>
-  <button class="btn btn-primary" id="nextModule" aria-label="Modulo successivo">
-    <span data-i18n="next_module">Avanti</span> →
-  </button>
+  <button class="btn btn-secondary" id="prevModule" aria-label="Modulo precedente" disabled>← <span data-i18n="prev_module">Precedente</span></button>
+  <button class="btn btn-primary" id="nextModule" aria-label="Modulo successivo"><span data-i18n="next_module">Avanti</span> →</button>
 </div>
 
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer" role="contentinfo">
-  <p data-i18n="footer_text">Webapp educativa – <strong>non</strong> costituisce consulenza legale. Fonti: <a href="https://www.quirinale.it/allegati/costituzione_italiana.pdf" target="_blank" rel="noopener">Costituzione italiana</a> · <a href="https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:12012P/TXT" target="_blank" rel="noopener">Carta dei diritti fondamentali UE</a></p>
+  <p data-i18n="footer_text">Webapp educativa &ndash; <strong>non</strong> costituisce consulenza legale. Fonti:
+    <a href="https://www.quirinale.it/allegati/costituzione_italiana.pdf" target="_blank" rel="noopener">Costituzione italiana</a> &middot;
+    <a href="https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:12012P/TXT" target="_blank" rel="noopener">Carta dei diritti fondamentali UE</a>
+  </p>
 </footer>
 
+<!-- I dati devono essere caricati prima della logica -->
+<script src="data.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
