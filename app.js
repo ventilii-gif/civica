@@ -17,6 +17,7 @@ const state = {
   quizIndex: 0,
   quizScore: 0,
   quizAnswered: [],
+  quizShuffled: [],        // Array di permutazioni [0-3], una per domanda
   gameState: {},
 };
 
@@ -37,6 +38,16 @@ function t(key) {
 function loc(obj) {
   if (!obj) return '';
   return obj[state.lang] ?? obj.it ?? '';
+}
+
+// Fisher-Yates shuffle — restituisce un nuovo array mescolato
+function shuffleArray(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
 
 // ============================================================
@@ -421,19 +432,31 @@ function renderQuiz() {
   }
 
   const q        = quizQuestions[state.quizIndex];
-  const answered = state.quizAnswered[state.quizIndex];
+  const answered = state.quizAnswered[state.quizIndex]; // indice originale risposta data
+
+  // Genera la permutazione delle opzioni per questa domanda (stabile per la sessione)
+  if (!state.quizShuffled[state.quizIndex]) {
+    state.quizShuffled[state.quizIndex] = shuffleArray([0, 1, 2, 3]);
+  }
+  const shuffle = state.quizShuffled[state.quizIndex];
+
   if (label) label.textContent = `${t('question_label')} ${state.quizIndex + 1} ${t('quiz_of')} ${total}`;
   if (fill)  fill.style.width = `${(state.quizIndex / total) * 100}%`;
 
   card.innerHTML = `
     <p class="quiz-question">${loc(q.q)}</p>
     <div class="quiz-options" role="radiogroup">
-      ${q.options.map((opt, i) => {
+      ${shuffle.map((origIdx, j) => {
+        const opt = q.options[origIdx];
         let cls = 'quiz-option';
-        if (answered !== undefined) { if (i === q.correct) cls += ' correct'; else if (i === answered) cls += ' wrong'; }
-        else if (i === answered) cls += ' selected';
-        return `<button class="${cls}" data-opt="${i}" ${answered !== undefined ? 'disabled' : ''} role="radio" aria-checked="${answered === i}">
-          <span>${['A','B','C','D'][i]}</span><span>${loc(opt)}</span></button>`;
+        if (answered !== undefined) {
+          if (origIdx === q.correct) cls += ' correct';
+          else if (origIdx === answered) cls += ' wrong';
+        }
+        return `<button class="${cls}" data-orig="${origIdx}" ${
+          answered !== undefined ? 'disabled' : ''
+        } role="radio" aria-checked="${answered === origIdx}">
+          <span>${['A','B','C','D'][j]}</span><span>${loc(opt)}</span></button>`;
       }).join('')}
     </div>`;
 
@@ -450,9 +473,9 @@ function renderQuiz() {
   card.querySelectorAll('.quiz-option').forEach(optBtn => {
     optBtn.addEventListener('click', () => {
       if (state.quizAnswered[state.quizIndex] !== undefined) return;
-      const opt = parseInt(optBtn.dataset.opt);
-      state.quizAnswered[state.quizIndex] = opt;
-      if (opt === q.correct) state.quizScore++;
+      const origIdx = parseInt(optBtn.dataset.orig);
+      state.quizAnswered[state.quizIndex] = origIdx;
+      if (origIdx === q.correct) state.quizScore++;
       renderQuiz();
     });
   });
@@ -508,7 +531,7 @@ function bindSummaryButtons() {
 function restartApp() {
   Object.assign(state, {
     currentModule: 0, scenarioIndex: 0, scenarioAnswered: [],
-    quizIndex: 0, quizScore: 0, quizAnswered: [], gameState: {},
+    quizIndex: 0, quizScore: 0, quizAnswered: [], quizShuffled: [], gameState: {},
   });
   $$('.step-btn').forEach(b => b.classList.remove('completed'));
   const nBtn = $('#nextQuestion');
