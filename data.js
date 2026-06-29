@@ -21,9 +21,9 @@ const i18n = {
     step3: 'Glossario', step4: 'Scenari', step5: 'Diritti e Doveri',
     step6: 'Quiz', step7: 'Riepilogo',
     const_title: 'La Costituzione italiana',
-    const_lead: 'Approvata il 22 dicembre 1947 ed entrata in vigore il 1° gennaio 1948, è la legge fondamentale dello Stato. Clicca su una scheda per approfondire.',
+    const_lead: 'Approvata il 22 dicembre 1947 ed entrata in vigore il 1° gennaio 1948. Clicca su una scheda per approfondire.',
     eu_title: 'La Carta dei diritti fondamentali dell\'UE',
-    eu_lead: 'Proclamata nel 2000 e vincolante dal 2009, raccoglie i diritti fondamentali in sette titoli. Clicca su una carta per confrontarla con la Costituzione italiana.',
+    eu_lead: 'Proclamata nel 2000 e vincolante dal 2009. Clicca su una carta per confrontarla con la Costituzione italiana.',
     compare_title: 'Confronto: Costituzione italiana vs Carta UE',
     compare_text: 'Clicca su un diritto nella Carta UE per vedere il principio corrispondente nella Costituzione italiana.',
     gloss_title: 'Glossario civico',
@@ -35,7 +35,7 @@ const i18n = {
     game_title: 'Diritti e Doveri',
     game_lead: 'Clicca su una carta per spostarla nella categoria corretta: Diritto o Dovere.',
     quiz_title: 'Quiz finale',
-    quiz_lead: 'Metti alla prova le conoscenze acquisite nel percorso.',
+    quiz_lead: 'Metti alla prova le conoscenze acquisite nel percorso. 20 domande con risposta casuale.',
     summary_title: 'Percorso completato!',
     summary_lead: 'Ecco il tuo riepilogo di cittadinanza consapevole.',
     prev: '← Precedente', next: 'Successivo →',
@@ -72,9 +72,9 @@ const i18n = {
     step3: 'Glossary', step4: 'Scenarios', step5: 'Rights & Duties',
     step6: 'Quiz', step7: 'Summary',
     const_title: 'The Italian Constitution',
-    const_lead: 'Adopted on 22 December 1947 and in force since 1 January 1948, it is the fundamental law of the State. Click a card to learn more.',
+    const_lead: 'Adopted on 22 December 1947 and in force since 1 January 1948. Click a card to learn more.',
     eu_title: 'The EU Charter of Fundamental Rights',
-    eu_lead: 'Proclaimed in 2000 and legally binding since 2009, it gathers fundamental rights in seven titles. Click a card to compare it with the Italian Constitution.',
+    eu_lead: 'Proclaimed in 2000 and legally binding since 2009. Click a card to compare it with the Italian Constitution.',
     compare_title: 'Comparison: Italian Constitution vs EU Charter',
     compare_text: 'Click a right in the EU Charter to see the corresponding principle in the Italian Constitution.',
     gloss_title: 'Civic Glossary',
@@ -86,7 +86,7 @@ const i18n = {
     game_title: 'Rights and Duties',
     game_lead: 'Click a card to move it to the correct category: Right or Duty.',
     quiz_title: 'Final Quiz',
-    quiz_lead: 'Test the knowledge acquired during the path.',
+    quiz_lead: 'Test the knowledge acquired during the path. 20 questions with randomised answers.',
     summary_title: 'Path completed!',
     summary_lead: 'Here is your aware citizenship summary.',
     prev: '← Previous', next: 'Next →',
@@ -123,9 +123,9 @@ const i18n = {
     step3: 'Glossário', step4: 'Cenários', step5: 'Direitos e Deveres',
     step6: 'Quiz', step7: 'Resumo',
     const_title: 'A Constituição italiana',
-    const_lead: 'Aprovada em 22 de dezembro de 1947 e em vigor desde 1° de janeiro de 1948, é a lei fundamental do Estado. Clique num cartão para saber mais.',
+    const_lead: 'Aprovada em 22 de dezembro de 1947 e em vigor desde 1° de janeiro de 1948. Clique num cartão para saber mais.',
     eu_title: 'A Carta dos Direitos Fundamentais da UE',
-    eu_lead: 'Proclamada em 2000 e juridicamente vinculante desde 2009, reúne os direitos fundamentais em sete títulos. Clique num cartão para compará-lo com a Constituição italiana.',
+    eu_lead: 'Proclamada em 2000 e juridicamente vinculante desde 2009. Clique num cartão para compará-lo com a Constituição italiana.',
     compare_title: 'Comparação: Constituição italiana vs Carta UE',
     compare_text: 'Clique num direito na Carta UE para ver o princípio correspondente na Constituição italiana.',
     gloss_title: 'Glossário cívico',
@@ -137,7 +137,7 @@ const i18n = {
     game_title: 'Direitos e Deveres',
     game_lead: 'Clique num cartão para movê-lo para a categoria correta: Direito ou Dever.',
     quiz_title: 'Quiz final',
-    quiz_lead: 'Teste os conhecimentos adquiridos no percurso.',
+    quiz_lead: 'Teste os conhecimentos adquiridos no percurso. 20 perguntas com respostas embaralhadas.',
     summary_title: 'Percurso concluído!',
     summary_lead: 'Aqui está o seu resumo de cidadania consciente.',
     prev: '← Anterior', next: 'Próximo →',
@@ -160,8 +160,7 @@ const i18n = {
   }
 };
 
-// ---------- ARTICOLI COSTITUZIONE ITALIANA ----------
-// Ogni oggetto: { num, title:{it,en,pt}, summary:{it,en,pt}, detail:{it,en,pt}, tag:{it,en,pt}, euLink (id carta UE) }
+// ---------- ARTICOLI COSTITUZIONE ----------
 const constitutionArticles = [
   {
     num: 'Art. 1',
@@ -245,23 +244,15 @@ const constitutionArticles = [
   }
 ];
 
-// ---------- CARTA DEI DIRITTI FONDAMENTALI UE ----------
+// ---------- CARTA UE ----------
 const euCharter = [
   {
     id: 'dignity',
     icon: '✨',
     category: { it: 'Titolo I — Dignità', en: 'Title I — Dignity', pt: 'Título I — Dignidade' },
     rights: [
-      {
-        title: { it: 'Dignità umana', en: 'Human dignity', pt: 'Dignidade humana' },
-        text: { it: 'La dignità umana è inviolabile. Deve essere rispettata e tutelata.', en: 'Human dignity is inviolable. It must be respected and protected.', pt: 'A dignidade humana é inviolável. Deve ser respeitada e protegida.' },
-        italyRef: { it: 'Art. 2 Cost. — diritti inviolabili della persona', en: 'Art. 2 Const. — inviolable rights of the person', pt: 'Art. 2 Const. — direitos invioláveis da pessoa' }
-      },
-      {
-        title: { it: 'Diritto alla vita', en: 'Right to life', pt: 'Direito à vida' },
-        text: { it: 'Ogni persona ha diritto alla vita. Nessuno può essere condannato alla pena di morte.', en: 'Everyone has the right to life. No one shall be condemned to the death penalty.', pt: 'Toda pessoa tem direito à vida. Ninguém pode ser condenado à pena de morte.' },
-        italyRef: { it: 'Art. 27 Cost. — non ammissibilità della pena di morte', en: 'Art. 27 Const. — inadmissibility of the death penalty', pt: 'Art. 27 Const. — inadmissibilidade da pena de morte' }
-      }
+      { title: { it: 'Dignità umana', en: 'Human dignity', pt: 'Dignidade humana' }, text: { it: 'La dignità umana è inviolabile. Deve essere rispettata e tutelata.', en: 'Human dignity is inviolable. It must be respected and protected.', pt: 'A dignidade humana é inviolável. Deve ser respeitada e protegida.' }, italyRef: { it: 'Art. 2 Cost. — diritti inviolabili della persona', en: 'Art. 2 Const. — inviolable rights of the person', pt: 'Art. 2 Const. — direitos invioláveis da pessoa' } },
+      { title: { it: 'Diritto alla vita', en: 'Right to life', pt: 'Direito à vida' }, text: { it: 'Ogni persona ha diritto alla vita. Nessuno può essere condannato alla pena di morte.', en: 'Everyone has the right to life. No one shall be condemned to the death penalty.', pt: 'Toda pessoa tem direito à vida. Ninguém pode ser condenado à pena de morte.' }, italyRef: { it: 'Art. 27 Cost. — non ammissibilità della pena di morte', en: 'Art. 27 Const. — inadmissibility of the death penalty', pt: 'Art. 27 Const. — inadmissibilidade da pena de morte' } }
     ]
   },
   {
@@ -269,16 +260,8 @@ const euCharter = [
     icon: '🕊️',
     category: { it: 'Titolo II — Libertà', en: 'Title II — Freedoms', pt: 'Título II — Liberdades' },
     rights: [
-      {
-        title: { it: 'Libertà di pensiero e di religione', en: 'Freedom of thought and religion', pt: 'Liberdade de pensamento e religião' },
-        text: { it: 'Ogni persona ha diritto alla libertà di pensiero, di coscienza e di religione.', en: 'Everyone has the right to freedom of thought, conscience and religion.', pt: 'Toda pessoa tem direito à liberdade de pensamento, de consciência e de religião.' },
-        italyRef: { it: 'Artt. 19-21 Cost. — libertà religiosa ed espressione', en: 'Arts. 19-21 Const. — religious freedom and expression', pt: 'Arts. 19-21 Const. — liberdade religiosa e expressão' }
-      },
-      {
-        title: { it: 'Libertà di espressione', en: 'Freedom of expression', pt: 'Liberdade de expressão' },
-        text: { it: 'Ogni persona ha diritto alla libertà di espressione, inclusa la libertà di opinione e di diffondere informazioni.', en: 'Everyone has the right to freedom of expression, including freedom of opinion and to receive and impart information.', pt: 'Toda pessoa tem direito à liberdade de expressão, incluindo a liberdade de opinião e de transmitir informações.' },
-        italyRef: { it: 'Art. 21 Cost. — libera manifestazione del pensiero', en: 'Art. 21 Const. — free expression of thought', pt: 'Art. 21 Const. — livre manifestação do pensamento' }
-      }
+      { title: { it: 'Libertà di pensiero e di religione', en: 'Freedom of thought and religion', pt: 'Liberdade de pensamento e religião' }, text: { it: 'Ogni persona ha diritto alla libertà di pensiero, di coscienza e di religione.', en: 'Everyone has the right to freedom of thought, conscience and religion.', pt: 'Toda pessoa tem direito à liberdade de pensamento, de consciência e de religião.' }, italyRef: { it: 'Artt. 19-21 Cost. — libertà religiosa ed espressione', en: 'Arts. 19-21 Const. — religious freedom and expression', pt: 'Arts. 19-21 Const. — liberdade religiosa e expressão' } },
+      { title: { it: 'Libertà di espressione', en: 'Freedom of expression', pt: 'Liberdade de expressão' }, text: { it: 'Ogni persona ha diritto alla libertà di espressione, inclusa la libertà di opinione e di diffondere informazioni.', en: 'Everyone has the right to freedom of expression, including freedom of opinion and to receive and impart information.', pt: 'Toda pessoa tem direito à liberdade de expressão, incluindo a liberdade de opinião e de transmitir informações.' }, italyRef: { it: 'Art. 21 Cost. — libera manifestazione del pensiero', en: 'Art. 21 Const. — free expression of thought', pt: 'Art. 21 Const. — livre manifestação do pensamento' } }
     ]
   },
   {
@@ -286,16 +269,8 @@ const euCharter = [
     icon: '⚖️',
     category: { it: 'Titolo III — Uguaglianza', en: 'Title III — Equality', pt: 'Título III — Igualdade' },
     rights: [
-      {
-        title: { it: 'Uguaglianza davanti alla legge', en: 'Equality before the law', pt: 'Igualdade perante a lei' },
-        text: { it: 'Tutte le persone sono uguali davanti alla legge.', en: 'Everyone is equal before the law.', pt: 'Todas as pessoas são iguais perante a lei.' },
-        italyRef: { it: 'Art. 3 Cost. — uguaglianza formale e sostanziale', en: 'Art. 3 Const. — formal and substantive equality', pt: 'Art. 3 Const. — igualdade formal e substancial' }
-      },
-      {
-        title: { it: 'Non discriminazione', en: 'Non-discrimination', pt: 'Não discriminação' },
-        text: { it: 'È vietata qualsiasi forma di discriminazione fondata su sesso, razza, colore, origini etniche o sociali, caratteristiche genetiche, lingua, religione o convinzioni personali, opinioni politiche.', en: 'Any discrimination based on sex, race, colour, ethnic or social origin, genetic features, language, religion or beliefs, political opinions is prohibited.', pt: 'É proibida qualquer forma de discriminação baseada em sexo, raça, cor, origem étnica ou social, características genéticas, língua, religião ou convicções pessoais, opiniões políticas.' },
-        italyRef: { it: 'Art. 3 Cost. — principio di uguaglianza', en: 'Art. 3 Const. — principle of equality', pt: 'Art. 3 Const. — princípio da igualdade' }
-      }
+      { title: { it: 'Uguaglianza davanti alla legge', en: 'Equality before the law', pt: 'Igualdade perante a lei' }, text: { it: 'Tutte le persone sono uguali davanti alla legge.', en: 'Everyone is equal before the law.', pt: 'Todas as pessoas são iguais perante a lei.' }, italyRef: { it: 'Art. 3 Cost. — uguaglianza formale e sostanziale', en: 'Art. 3 Const. — formal and substantive equality', pt: 'Art. 3 Const. — igualdade formal e substancial' } },
+      { title: { it: 'Non discriminazione', en: 'Non-discrimination', pt: 'Não discriminação' }, text: { it: 'È vietata qualsiasi forma di discriminazione fondata su sesso, razza, colore, origini, caratteristiche genetiche, lingua, religione o opinioni politiche.', en: 'Any discrimination based on sex, race, colour, ethnic or social origin, genetic features, language, religion or beliefs, political opinions is prohibited.', pt: 'É proibida qualquer forma de discriminação baseada em sexo, raça, cor, origem, características genéticas, língua, religião ou opiniões políticas.' }, italyRef: { it: 'Art. 3 Cost. — principio di uguaglianza', en: 'Art. 3 Const. — principle of equality', pt: 'Art. 3 Const. — princípio da igualdade' } }
     ]
   },
   {
@@ -303,16 +278,8 @@ const euCharter = [
     icon: '🤝',
     category: { it: 'Titolo IV — Solidarietà', en: 'Title IV — Solidarity', pt: 'Título IV — Solidariedade' },
     rights: [
-      {
-        title: { it: 'Diritto alla protezione della salute', en: 'Right to health care', pt: 'Direito à proteção da saúde' },
-        text: { it: 'Ogni persona ha il diritto di accedere alla prevenzione sanitaria e di ottenere cure mediche alle condizioni stabilite dalle legislazioni e prassi nazionali.', en: 'Everyone has the right of access to preventive health care and the right to benefit from medical treatment under the conditions established by national laws and practices.', pt: 'Toda pessoa tem direito de acesso à prevenção sanitária e de beneficiar de cuidados médicos nas condições estabelecidas pelas legislações e práticas nacionais.' },
-        italyRef: { it: 'Art. 32 Cost. — diritto alla salute', en: 'Art. 32 Const. — right to health', pt: 'Art. 32 Const. — direito à saúde' }
-      },
-      {
-        title: { it: 'Diritto all\'istruzione', en: 'Right to education', pt: 'Direito à educação' },
-        text: { it: 'Ogni persona ha diritto all\'istruzione e all\'accesso alla formazione professionale e continua.', en: 'Everyone has the right to education and to have access to vocational and continuing training.', pt: 'Toda pessoa tem direito à educação e ao acesso à formação profissional e contínua.' },
-        italyRef: { it: 'Art. 34 Cost. — diritto allo studio', en: 'Art. 34 Const. — right to education', pt: 'Art. 34 Const. — direito ao estudo' }
-      }
+      { title: { it: 'Diritto alla protezione della salute', en: 'Right to health care', pt: 'Direito à proteção da saúde' }, text: { it: 'Ogni persona ha il diritto di accedere alla prevenzione sanitaria e di ottenere cure mediche.', en: 'Everyone has the right of access to preventive health care and the right to benefit from medical treatment.', pt: 'Toda pessoa tem direito de acesso à prevenção sanitária e de beneficiar de cuidados médicos.' }, italyRef: { it: 'Art. 32 Cost. — diritto alla salute', en: 'Art. 32 Const. — right to health', pt: 'Art. 32 Const. — direito à saúde' } },
+      { title: { it: 'Diritto all\'istruzione', en: 'Right to education', pt: 'Direito à educação' }, text: { it: 'Ogni persona ha diritto all\'istruzione e all\'accesso alla formazione professionale e continua.', en: 'Everyone has the right to education and to have access to vocational and continuing training.', pt: 'Toda pessoa tem direito à educação e ao acesso à formação profissional e contínua.' }, italyRef: { it: 'Art. 34 Cost. — diritto allo studio', en: 'Art. 34 Const. — right to education', pt: 'Art. 34 Const. — direito ao estudo' } }
     ]
   },
   {
@@ -320,11 +287,7 @@ const euCharter = [
     icon: '🏛️',
     category: { it: 'Titolo V — Cittadinanza', en: 'Title V — Citizens\' Rights', pt: 'Título V — Cidadania' },
     rights: [
-      {
-        title: { it: 'Diritto di voto al Parlamento europeo', en: 'Right to vote in European Parliament', pt: 'Direito de voto no Parlamento Europeu' },
-        text: { it: 'Ogni cittadino dell\'Unione ha il diritto di voto e di eleggibilità alle elezioni del Parlamento europeo.', en: 'Every citizen of the Union has the right to vote and to stand as a candidate at elections to the European Parliament.', pt: 'Todo cidadão da União tem direito de voto e de candidatura nas eleições para o Parlamento Europeu.' },
-        italyRef: { it: 'Art. 48 Cost. — diritto di voto', en: 'Art. 48 Const. — right to vote', pt: 'Art. 48 Const. — direito ao voto' }
-      }
+      { title: { it: 'Diritto di voto al Parlamento europeo', en: 'Right to vote in European Parliament', pt: 'Direito de voto no Parlamento Europeu' }, text: { it: 'Ogni cittadino dell\'Unione ha il diritto di voto e di eleggibilità alle elezioni del Parlamento europeo.', en: 'Every citizen of the Union has the right to vote and to stand as a candidate at elections to the European Parliament.', pt: 'Todo cidadão da União tem direito de voto e de candidatura nas eleições para o Parlamento Europeu.' }, italyRef: { it: 'Art. 48 Cost. — diritto di voto', en: 'Art. 48 Const. — right to vote', pt: 'Art. 48 Const. — direito ao voto' } }
     ]
   },
   {
@@ -332,82 +295,24 @@ const euCharter = [
     icon: '⚖️',
     category: { it: 'Titolo VI — Giustizia', en: 'Title VI — Justice', pt: 'Título VI — Justiça' },
     rights: [
-      {
-        title: { it: 'Diritto a un ricorso effettivo', en: 'Right to an effective remedy', pt: 'Direito a um recurso efetivo' },
-        text: { it: 'Ogni persona i cui diritti siano stati violati ha diritto a un ricorso effettivo davanti a un giudice.', en: 'Everyone whose rights are violated has the right to an effective remedy before a tribunal.', pt: 'Toda pessoa cujos direitos sejam violados tem direito a um recurso efetivo perante um tribunal.' },
-        italyRef: { it: 'Art. 24 Cost. — diritto di azione in giudizio', en: 'Art. 24 Const. — right of action in court', pt: 'Art. 24 Const. — direito de ação judicial' }
-      },
-      {
-        title: { it: 'Presunzione di innocenza', en: 'Presumption of innocence', pt: 'Presunção de inocência' },
-        text: { it: 'Ogni imputato è considerato innocente fino a quando la sua colpevolezza non sia stata legalmente provata.', en: 'Everyone who has been charged shall be presumed innocent until proved guilty according to law.', pt: 'Todo acusado é considerado inocente até que a sua culpabilidade seja legalmente provada.' },
-        italyRef: { it: 'Art. 27 Cost. — non colpevolezza fino a condanna definitiva', en: 'Art. 27 Const. — presumption of innocence', pt: 'Art. 27 Const. — presunção de inocência' }
-      }
+      { title: { it: 'Diritto a un ricorso effettivo', en: 'Right to an effective remedy', pt: 'Direito a um recurso efetivo' }, text: { it: 'Ogni persona i cui diritti siano stati violati ha diritto a un ricorso effettivo davanti a un giudice.', en: 'Everyone whose rights are violated has the right to an effective remedy before a tribunal.', pt: 'Toda pessoa cujos direitos sejam violados tem direito a um recurso efetivo perante um tribunal.' }, italyRef: { it: 'Art. 24 Cost. — diritto di azione in giudizio', en: 'Art. 24 Const. — right of action in court', pt: 'Art. 24 Const. — direito de ação judicial' } },
+      { title: { it: 'Presunzione di innocenza', en: 'Presumption of innocence', pt: 'Presunção de inocência' }, text: { it: 'Ogni imputato è considerato innocente fino a quando la sua colpevolezza non sia stata legalmente provata.', en: 'Everyone who has been charged shall be presumed innocent until proved guilty according to law.', pt: 'Todo acusado é considerado inocente até que a sua culpabilidade seja legalmente provada.' }, italyRef: { it: 'Art. 27 Cost. — non colpevolezza fino a condanna definitiva', en: 'Art. 27 Const. — presumption of innocence', pt: 'Art. 27 Const. — presunção de inocência' } }
     ]
   }
 ];
 
 // ---------- GLOSSARIO ----------
 const glossaryTerms = [
-  {
-    icon: '📜',
-    term: { it: 'Costituzione', en: 'Constitution', pt: 'Constituição' },
-    def: { it: 'Legge fondamentale di uno Stato che ne stabilisce la forma istituzionale, i principi e i diritti dei cittadini. In Italia è rigida: non può essere modificata con legge ordinaria.', en: 'The fundamental law of a State that establishes its institutional form, principles and citizens\' rights. In Italy it is rigid: it cannot be modified by ordinary law.', pt: 'Lei fundamental de um Estado que estabelece a sua forma institucional, os princípios e os direitos dos cidadãos. Na Itália é rígida: não pode ser modificada por lei ordinária.' },
-    source: { it: 'Fonte: Art. 138 Costituzione italiana', en: 'Source: Art. 138 Italian Constitution', pt: 'Fonte: Art. 138 Constituição italiana' }
-  },
-  {
-    icon: '🗳️',
-    term: { it: 'Democrazia', en: 'Democracy', pt: 'Democracia' },
-    def: { it: 'Sistema di governo in cui il potere appartiene al popolo, esercitato direttamente o tramite rappresentanti eletti.', en: 'System of government in which power belongs to the people, exercised directly or through elected representatives.', pt: 'Sistema de governo no qual o poder pertence ao povo, exercido diretamente ou por meio de representantes eleitos.' },
-    source: { it: 'Fonte: Art. 1 Costituzione italiana', en: 'Source: Art. 1 Italian Constitution', pt: 'Fonte: Art. 1 Constituição italiana' }
-  },
-  {
-    icon: '⚖️',
-    term: { it: 'Stato di diritto', en: 'Rule of law', pt: 'Estado de direito' },
-    def: { it: 'Principio per cui anche lo Stato è soggetto alla legge. Nessun atto del potere pubblico può violare le norme costituzionali.', en: 'Principle by which even the State is subject to the law. No act of public power can violate constitutional norms.', pt: 'Princípio pelo qual também o Estado está sujeito à lei. Nenhum ato do poder público pode violar as normas constitucionais.' },
-    source: { it: 'Principio generale dell\'ordinamento', en: 'General principle of the legal order', pt: 'Princípio geral do ordenamento jurídico' }
-  },
-  {
-    icon: '🏛️',
-    term: { it: 'Repubblica', en: 'Republic', pt: 'República' },
-    def: { it: 'Forma di governo in cui il capo dello Stato è eletto (o designato) e non ereditario. L\'Italia è diventata Repubblica con il referendum del 2 giugno 1946.', en: 'Form of government in which the head of state is elected (or designated) and not hereditary. Italy became a Republic with the referendum of 2 June 1946.', pt: 'Forma de governo na qual o chefe de Estado é eleito (ou designado) e não hereditário. A Itália tornou-se República com o referendo de 2 de junho de 1946.' },
-    source: { it: 'Fonte: Art. 1 Costituzione italiana', en: 'Source: Art. 1 Italian Constitution', pt: 'Fonte: Art. 1 Constituição italiana' }
-  },
-  {
-    icon: '🤲',
-    term: { it: 'Sovranità popolare', en: 'Popular sovereignty', pt: 'Soberania popular' },
-    def: { it: 'Il potere supremo dello Stato appartiene al popolo, che lo esercita nei modi e nei limiti stabiliti dalla Costituzione (elezioni, referendum, ecc.).', en: 'The supreme power of the State belongs to the people, who exercise it in the ways and within the limits established by the Constitution (elections, referendums, etc.).', pt: 'O poder supremo do Estado pertence ao povo, que o exerce nos modos e limites estabelecidos pela Constituição (eleições, referendos, etc.).' },
-    source: { it: 'Fonte: Art. 1 Costituzione italiana', en: 'Source: Art. 1 Italian Constitution', pt: 'Fonte: Art. 1 Constituição italiana' }
-  },
-  {
-    icon: '🌍',
-    term: { it: 'Unione europea', en: 'European Union', pt: 'União Europeia' },
-    def: { it: 'Organizzazione sovranazionale di 27 Stati membri che cooperano in settori quali economia, diritti, sicurezza e ambiente. Le sue norme hanno effetti diretti negli ordinamenti nazionali.', en: 'Supranational organisation of 27 member states cooperating in areas such as economy, rights, security and environment. Its rules have direct effects in national legal systems.', pt: 'Organização supranacional de 27 Estados membros que cooperam em áreas como economia, direitos, segurança e ambiente. As suas normas têm efeitos diretos nos ordenamentos nacionais.' },
-    source: { it: 'Trattato di Lisbona (2009)', en: 'Treaty of Lisbon (2009)', pt: 'Tratado de Lisboa (2009)' }
-  },
-  {
-    icon: '📋',
-    term: { it: 'Diritto fondamentale', en: 'Fundamental right', pt: 'Direito fundamental' },
-    def: { it: 'Diritto riconosciuto come essenziale alla dignità umana, tutelato dalla Costituzione o dal diritto internazionale e non sopprimibile dallo Stato.', en: 'Right recognised as essential to human dignity, protected by the Constitution or international law and not suppressible by the State.', pt: 'Direito reconhecido como essencial à dignidade humana, protegido pela Constituição ou pelo direito internacional e não suprimível pelo Estado.' },
-    source: { it: 'Fonti: Cost. it., CEDU, Carta UE', en: 'Sources: Italian Const., ECHR, EU Charter', pt: 'Fontes: Const. it., CEDH, Carta UE' }
-  },
-  {
-    icon: '📌',
-    term: { it: 'Dovere civico', en: 'Civic duty', pt: 'Dever cívico' },
-    def: { it: 'Obbligo che la Costituzione pone in capo al cittadino verso la comunità (es. pagare le tasse, difendere la patria, rispettare la Costituzione).', en: 'Obligation that the Constitution places on the citizen towards the community (e.g. paying taxes, defending the homeland, respecting the Constitution).', pt: 'Obrigação que a Constituição impõe ao cidadão para com a comunidade (ex.: pagar impostos, defender a pátria, respeitar a Constituição).' },
-    source: { it: 'Fonti: Artt. 52-54 Costituzione italiana', en: 'Sources: Arts. 52-54 Italian Constitution', pt: 'Fontes: Arts. 52-54 Constituição italiana' }
-  },
-  {
-    icon: '🔏',
-    term: { it: 'Habeas corpus', en: 'Habeas corpus', pt: 'Habeas corpus' },
-    def: { it: 'Principio (di origine anglosassone) che tutela la libertà personale: nessuno può essere detenuto senza un atto giudiziario motivato. In Italia è sancito dall\'Art. 13 della Costituzione.', en: 'Principle (of Anglo-Saxon origin) protecting personal freedom: no one may be detained without a reasoned judicial act. In Italy it is enshrined in Art. 13 of the Constitution.', pt: 'Princípio (de origem anglo-saxã) que protege a liberdade pessoal: ninguém pode ser detido sem um ato judicial fundamentado. Na Itália está consagrado no Art. 13 da Constituição.' },
-    source: { it: 'Art. 13 Costituzione italiana', en: 'Art. 13 Italian Constitution', pt: 'Art. 13 Constituição italiana' }
-  },
-  {
-    icon: '🏳️',
-    term: { it: 'Pluralismo', en: 'Pluralism', pt: 'Pluralismo' },
-    def: { it: 'Principio per cui in una democrazia coesistono legittimamente più partiti, religioni, opinioni e stili di vita, senza che lo Stato imponga un\'unica visione.', en: 'Principle by which in a democracy multiple parties, religions, opinions and lifestyles legitimately coexist, without the State imposing a single vision.', pt: 'Princípio pelo qual em uma democracia coexistem legitimamente vários partidos, religiões, opiniões e estilos de vida, sem que o Estado imponha uma visão única.' },
-    source: { it: 'Fonti: Artt. 2, 18-21 Costituzione italiana', en: 'Sources: Arts. 2, 18-21 Italian Constitution', pt: 'Fontes: Arts. 2, 18-21 Constituição italiana' }
-  }
+  { icon: '📜', term: { it: 'Costituzione', en: 'Constitution', pt: 'Constituição' }, def: { it: 'Legge fondamentale di uno Stato che ne stabilisce la forma istituzionale, i principi e i diritti dei cittadini. In Italia è rigida: non può essere modificata con legge ordinaria.', en: 'The fundamental law of a State that establishes its institutional form, principles and citizens\' rights. In Italy it is rigid: it cannot be modified by ordinary law.', pt: 'Lei fundamental de um Estado que estabelece a sua forma institucional, os princípios e os direitos dos cidadãos. Na Itália é rígida: não pode ser modificada por lei ordinária.' }, source: { it: 'Fonte: Art. 138 Costituzione italiana', en: 'Source: Art. 138 Italian Constitution', pt: 'Fonte: Art. 138 Constituição italiana' } },
+  { icon: '🗳️', term: { it: 'Democrazia', en: 'Democracy', pt: 'Democracia' }, def: { it: 'Sistema di governo in cui il potere appartiene al popolo, esercitato direttamente o tramite rappresentanti eletti.', en: 'System of government in which power belongs to the people, exercised directly or through elected representatives.', pt: 'Sistema de governo no qual o poder pertence ao povo, exercido diretamente ou por meio de representantes eleitos.' }, source: { it: 'Fonte: Art. 1 Costituzione italiana', en: 'Source: Art. 1 Italian Constitution', pt: 'Fonte: Art. 1 Constituição italiana' } },
+  { icon: '⚖️', term: { it: 'Stato di diritto', en: 'Rule of law', pt: 'Estado de direito' }, def: { it: 'Principio per cui anche lo Stato è soggetto alla legge. Nessun atto del potere pubblico può violare le norme costituzionali.', en: 'Principle by which even the State is subject to the law. No act of public power can violate constitutional norms.', pt: 'Princípio pelo qual também o Estado está sujeito à lei. Nenhum ato do poder público pode violar as normas constitucionais.' }, source: { it: 'Principio generale dell\'ordinamento', en: 'General principle of the legal order', pt: 'Princípio geral do ordenamento jurídico' } },
+  { icon: '🏛️', term: { it: 'Repubblica', en: 'Republic', pt: 'República' }, def: { it: 'Forma di governo in cui il capo dello Stato è eletto (o designato) e non ereditario. L\'Italia è diventata Repubblica con il referendum del 2 giugno 1946.', en: 'Form of government in which the head of state is elected (or designated) and not hereditary. Italy became a Republic with the referendum of 2 June 1946.', pt: 'Forma de governo na qual o chefe de Estado é eleito (ou designado) e não hereditário. A Itália tornou-se República com o referendo de 2 de junho de 1946.' }, source: { it: 'Fonte: Art. 1 Costituzione italiana', en: 'Source: Art. 1 Italian Constitution', pt: 'Fonte: Art. 1 Constituição italiana' } },
+  { icon: '🤲', term: { it: 'Sovranità popolare', en: 'Popular sovereignty', pt: 'Soberania popular' }, def: { it: 'Il potere supremo dello Stato appartiene al popolo, che lo esercita nei modi e nei limiti stabiliti dalla Costituzione.', en: 'The supreme power of the State belongs to the people, who exercise it in the ways and within the limits established by the Constitution.', pt: 'O poder supremo do Estado pertence ao povo, que o exerce nos modos e limites estabelecidos pela Constituição.' }, source: { it: 'Fonte: Art. 1 Costituzione italiana', en: 'Source: Art. 1 Italian Constitution', pt: 'Fonte: Art. 1 Constituição italiana' } },
+  { icon: '🌍', term: { it: 'Unione europea', en: 'European Union', pt: 'União Europeia' }, def: { it: 'Organizzazione sovranazionale di 27 Stati membri che cooperano in settori quali economia, diritti, sicurezza e ambiente. Le sue norme hanno effetti diretti negli ordinamenti nazionali.', en: 'Supranational organisation of 27 member states cooperating in areas such as economy, rights, security and environment. Its rules have direct effects in national legal systems.', pt: 'Organização supranacional de 27 Estados membros que cooperam em áreas como economia, direitos, segurança e ambiente. As suas normas têm efeitos diretos nos ordenamentos nacionais.' }, source: { it: 'Trattato di Lisbona (2009)', en: 'Treaty of Lisbon (2009)', pt: 'Tratado de Lisboa (2009)' } },
+  { icon: '📋', term: { it: 'Diritto fondamentale', en: 'Fundamental right', pt: 'Direito fundamental' }, def: { it: 'Diritto riconosciuto come essenziale alla dignità umana, tutelato dalla Costituzione o dal diritto internazionale e non sopprimibile dallo Stato.', en: 'Right recognised as essential to human dignity, protected by the Constitution or international law and not suppressible by the State.', pt: 'Direito reconhecido como essencial à dignidade humana, protegido pela Constituição ou pelo direito internacional e não suprimível pelo Estado.' }, source: { it: 'Fonti: Cost. it., CEDU, Carta UE', en: 'Sources: Italian Const., ECHR, EU Charter', pt: 'Fontes: Const. it., CEDH, Carta UE' } },
+  { icon: '📌', term: { it: 'Dovere civico', en: 'Civic duty', pt: 'Dever cívico' }, def: { it: 'Obbligo che la Costituzione pone in capo al cittadino verso la comunità (es. pagare le tasse, difendere la patria, rispettare la Costituzione).', en: 'Obligation that the Constitution places on the citizen towards the community (e.g. paying taxes, defending the homeland, respecting the Constitution).', pt: 'Obrigação que a Constituição impõe ao cidadão para com a comunidade (ex.: pagar impostos, defender a pátria, respeitar a Constituição).' }, source: { it: 'Fonti: Artt. 52-54 Costituzione italiana', en: 'Sources: Arts. 52-54 Italian Constitution', pt: 'Fontes: Arts. 52-54 Constituição italiana' } },
+  { icon: '🔏', term: { it: 'Habeas corpus', en: 'Habeas corpus', pt: 'Habeas corpus' }, def: { it: 'Principio che tutela la libertà personale: nessuno può essere detenuto senza un atto giudiziario motivato. In Italia è sancito dall\'Art. 13 della Costituzione.', en: 'Principle protecting personal freedom: no one may be detained without a reasoned judicial act. In Italy it is enshrined in Art. 13 of the Constitution.', pt: 'Princípio que protege a liberdade pessoal: ninguém pode ser detido sem um ato judicial fundamentado. Na Itália está consagrado no Art. 13 da Constituição.' }, source: { it: 'Art. 13 Costituzione italiana', en: 'Art. 13 Italian Constitution', pt: 'Art. 13 Constituição italiana' } },
+  { icon: '🏳️', term: { it: 'Pluralismo', en: 'Pluralism', pt: 'Pluralismo' }, def: { it: 'Principio per cui in una democrazia coesistono legittimamente più partiti, religioni, opinioni e stili di vita, senza che lo Stato imponga un\'unica visione.', en: 'Principle by which in a democracy multiple parties, religions, opinions and lifestyles legitimately coexist, without the State imposing a single vision.', pt: 'Princípio pelo qual em uma democracia coexistem legitimamente vários partidos, religiões, opiniões e estilos de vida, sem que o Estado imponha uma visão única.' }, source: { it: 'Fonti: Artt. 2, 18-21 Costituzione italiana', en: 'Sources: Arts. 2, 18-21 Italian Constitution', pt: 'Fontes: Arts. 2, 18-21 Constituição italiana' } }
 ];
 
 // ---------- SCENARI ----------
@@ -416,16 +321,8 @@ const scenarios = [
     title: { it: 'Il giornalista censurato', en: 'The censored journalist', pt: 'O jornalista censurado' },
     text: { it: 'Un giornalista scrive un articolo critico su una decisione del governo. Le autorità ordinano alla testata di non pubblicarlo prima della stampa.', en: 'A journalist writes a critical article about a government decision. The authorities order the newspaper not to publish it before printing.', pt: 'Um jornalista escreve um artigo crítico sobre uma decisão do governo. As autoridades ordenam ao jornal que não o publique antes da impressão.' },
     choices: [
-      {
-        text: { it: 'Viola la libertà di stampa (Art. 21 Cost.) che vieta la censura preventiva.', en: 'Violates freedom of the press (Art. 21 Const.) which prohibits prior censorship.', pt: 'Viola a liberdade de imprensa (Art. 21 Const.) que proíbe a censura prévia.' },
-        correct: true,
-        feedback: { it: 'Corretto! L\'Art. 21 Cost. vieta espressamente sequestri e censure preventive della stampa.', en: 'Correct! Art. 21 Const. expressly prohibits seizures and prior censorship of the press.', pt: 'Correto! O Art. 21 Const. proíbe expressamente apreensões e censura prévia da imprensa.' }
-      },
-      {
-        text: { it: 'È legittimo: il governo può limitare la stampa per motivi di sicurezza.', en: 'It is legitimate: the government can restrict the press for security reasons.', pt: 'É legítimo: o governo pode restringir a imprensa por motivos de segurança.' },
-        correct: false,
-        feedback: { it: 'Non corretto. La censura preventiva non è ammessa: solo un giudice può disporre il sequestro, e solo in casi tassativi.', en: 'Not correct. Prior censorship is not allowed: only a judge can order seizure, and only in specific cases.', pt: 'Não correto. A censura prévia não é permitida: apenas um juiz pode ordenar a apreensão, e apenas em casos taxativos.' }
-      }
+      { text: { it: 'Viola la libertà di stampa (Art. 21 Cost.) che vieta la censura preventiva.', en: 'Violates freedom of the press (Art. 21 Const.) which prohibits prior censorship.', pt: 'Viola a liberdade de imprensa (Art. 21 Const.) que proíbe a censura prévia.' }, correct: true, feedback: { it: 'Corretto! L\'Art. 21 Cost. vieta espressamente la censura preventiva della stampa.', en: 'Correct! Art. 21 Const. expressly prohibits prior censorship of the press.', pt: 'Correto! O Art. 21 Const. proíbe expressamente a censura prévia da imprensa.' } },
+      { text: { it: 'È legittimo: il governo può limitare la stampa per motivi di sicurezza.', en: 'It is legitimate: the government can restrict the press for security reasons.', pt: 'É legítimo: o governo pode restringir a imprensa por motivos de segurança.' }, correct: false, feedback: { it: 'Non corretto. La censura preventiva non è ammessa: solo un giudice può disporre il sequestro, e solo in casi tassativi.', en: 'Not correct. Prior censorship is not allowed: only a judge can order seizure, and only in specific cases.', pt: 'Não correto. A censura prévia não é permitida: apenas um juiz pode ordenar a apreensão, e apenas em casos taxativos.' } }
     ],
     rightInvolved: { it: 'Libertà di stampa — Art. 21 Cost.', en: 'Freedom of the press — Art. 21 Const.', pt: 'Liberdade de imprensa — Art. 21 Const.' }
   },
@@ -433,16 +330,8 @@ const scenarios = [
     title: { it: 'L\'arresto senza mandato', en: 'Arrest without warrant', pt: 'Prisão sem mandado' },
     text: { it: 'La polizia ferma una persona per strada e la trattiene in caserma per 72 ore senza presentarla a un giudice e senza informarla dei motivi.', en: 'Police stop a person in the street and detain them at the station for 72 hours without bringing them before a judge or informing them of the reasons.', pt: 'A polícia aborda uma pessoa na rua e a detém na delegacia por 72 horas sem levá-la a um juiz nem informá-la dos motivos.' },
     choices: [
-      {
-        text: { it: 'La detenzione è legittima se la polizia sospetta un reato.', en: 'The detention is lawful if police suspect a crime.', pt: 'A detenção é legítima se a polícia suspeitar de um crime.' },
-        correct: false,
-        feedback: { it: 'Non corretto. L\'Art. 13 Cost. richiede sempre un atto motivato dell\'autorità giudiziaria o la convalida entro 48 ore.', en: 'Not correct. Art. 13 Const. always requires a reasoned act of judicial authority or validation within 48 hours.', pt: 'Não correto. O Art. 13 Const. sempre exige um ato fundamentado da autoridade judicial ou homologação em 48 horas.' }
-      },
-      {
-        text: { it: 'Viola la libertà personale (Art. 13 Cost.): serve l\'atto del giudice.', en: 'Violates personal freedom (Art. 13 Const.): a judicial act is required.', pt: 'Viola a liberdade pessoal (Art. 13 Const.): é necessário o ato judicial.' },
-        correct: true,
-        feedback: { it: 'Corretto! Anche in caso di fermo di polizia, il giudice deve convalidare l\'arresto entro 48 ore.', en: 'Correct! Even in case of police detention, the judge must validate the arrest within 48 hours.', pt: 'Correto! Mesmo em caso de detenção policial, o juiz deve homologar a prisão em 48 horas.' }
-      }
+      { text: { it: 'La detenzione è legittima se la polizia sospetta un reato.', en: 'The detention is lawful if police suspect a crime.', pt: 'A detenção é legítima se a polícia suspeitar de um crime.' }, correct: false, feedback: { it: 'Non corretto. L\'Art. 13 Cost. richiede sempre un atto motivato o la convalida del giudice entro 48 ore.', en: 'Not correct. Art. 13 Const. always requires a reasoned act or judicial validation within 48 hours.', pt: 'Não correto. O Art. 13 Const. sempre exige um ato fundamentado ou homologação judicial em 48 horas.' } },
+      { text: { it: 'Viola la libertà personale (Art. 13 Cost.): serve l\'atto del giudice.', en: 'Violates personal freedom (Art. 13 Const.): a judicial act is required.', pt: 'Viola a liberdade pessoal (Art. 13 Const.): é necessário o ato judicial.' }, correct: true, feedback: { it: 'Corretto! Anche in caso di fermo di polizia, il giudice deve convalidare l\'arresto entro 48 ore.', en: 'Correct! Even in case of police detention, the judge must validate the arrest within 48 hours.', pt: 'Correto! Mesmo em caso de detenção policial, o juiz deve homologar a prisão em 48 horas.' } }
     ],
     rightInvolved: { it: 'Libertà personale — Art. 13 Cost.', en: 'Personal freedom — Art. 13 Const.', pt: 'Liberdade pessoal — Art. 13 Const.' }
   },
@@ -450,16 +339,8 @@ const scenarios = [
     title: { it: 'Il lavoratore discriminato', en: 'The discriminated worker', pt: 'O trabalhador discriminado' },
     text: { it: 'Un\'azienda non assume una candidata qualificata dichiarando esplicitamente che preferisce assumere uomini per quel ruolo.', en: 'A company does not hire a qualified candidate, explicitly stating they prefer to hire men for that role.', pt: 'Uma empresa não contrata uma candidata qualificada declarando explicitamente que prefere contratar homens para essa função.' },
     choices: [
-      {
-        text: { it: 'Viola il principio di uguaglianza (Art. 3 Cost.) e le norme antidiscriminazione.', en: 'Violates the principle of equality (Art. 3 Const.) and anti-discrimination rules.', pt: 'Viola o princípio da igualdade (Art. 3 Const.) e as normas antidiscriminação.' },
-        correct: true,
-        feedback: { it: 'Corretto! L\'Art. 3 Cost. vieta discriminazioni basate sul sesso. La normativa europea (Dir. 2006/54/CE) rafforza questa tutela.', en: 'Correct! Art. 3 Const. prohibits discrimination based on sex. European legislation (Dir. 2006/54/EC) reinforces this protection.', pt: 'Correto! O Art. 3 Const. proíbe discriminações baseadas no sexo. A legislação europeia (Dir. 2006/54/CE) reforça essa proteção.' }
-      },
-      {
-        text: { it: 'È una scelta legittima dell\'imprenditore nella selezione del personale.', en: 'It is a legitimate choice of the employer in staff selection.', pt: 'É uma escolha legítima do empregador na seleção de pessoal.' },
-        correct: false,
-        feedback: { it: 'Non corretto. La libertà d\'impresa non include il diritto di discriminare in base al sesso.', en: 'Not correct. Freedom of enterprise does not include the right to discriminate on the basis of sex.', pt: 'Não correto. A liberdade de empresa não inclui o direito de discriminar com base no sexo.' }
-      }
+      { text: { it: 'Viola il principio di uguaglianza (Art. 3 Cost.) e le norme antidiscriminazione.', en: 'Violates the principle of equality (Art. 3 Const.) and anti-discrimination rules.', pt: 'Viola o princípio da igualdade (Art. 3 Const.) e as normas antidiscriminação.' }, correct: true, feedback: { it: 'Corretto! L\'Art. 3 Cost. vieta discriminazioni basate sul sesso. La normativa europea rafforza questa tutela.', en: 'Correct! Art. 3 Const. prohibits discrimination based on sex. European legislation reinforces this protection.', pt: 'Correto! O Art. 3 Const. proíbe discriminações baseadas no sexo. A legislação europeia reforça essa proteção.' } },
+      { text: { it: 'È una scelta legittima dell\'imprenditore nella selezione del personale.', en: 'It is a legitimate choice of the employer in staff selection.', pt: 'É uma escolha legítima do empregador na seleção de pessoal.' }, correct: false, feedback: { it: 'Non corretto. La libertà d\'impresa non include il diritto di discriminare in base al sesso.', en: 'Not correct. Freedom of enterprise does not include the right to discriminate on the basis of sex.', pt: 'Não correto. A liberdade de empresa não inclui o direito de discriminar com base no sexo.' } }
     ],
     rightInvolved: { it: 'Uguaglianza — Art. 3 Cost. + Art. 21 Carta UE', en: 'Equality — Art. 3 Const. + Art. 21 EU Charter', pt: 'Igualdade — Art. 3 Const. + Art. 21 Carta UE' }
   },
@@ -467,16 +348,8 @@ const scenarios = [
     title: { it: 'L\'ospedale che rifiuta le cure', en: 'The hospital that refuses treatment', pt: 'O hospital que recusa o tratamento' },
     text: { it: 'Una persona in condizioni di emergenza viene rifiutata da un pronto soccorso perché non ha documenti di residenza.', en: 'A person in an emergency situation is refused treatment at an emergency room because they do not have residency documents.', pt: 'Uma pessoa em situação de emergência é recusada num pronto-socorro porque não tem documentos de residência.' },
     choices: [
-      {
-        text: { it: 'Il pronto soccorso può rifiutare chi non ha residenza.', en: 'The emergency room can refuse those without residency.', pt: 'O pronto-socorro pode recusar quem não tem residência.' },
-        correct: false,
-        feedback: { it: 'Non corretto. Le cure di emergenza sono garantite a chiunque sul territorio italiano, indipendentemente dalla residenza o dalla cittadinanza.', en: 'Not correct. Emergency care is guaranteed to everyone in Italy, regardless of residency or citizenship.', pt: 'Não correto. O atendimento de emergência é garantido a todos no território italiano, independentemente da residência ou cidadania.' }
-      },
-      {
-        text: { it: 'Viola il diritto alla salute (Art. 32 Cost.): le cure urgenti spettano a tutti.', en: 'Violates the right to health (Art. 32 Const.): urgent care belongs to everyone.', pt: 'Viola o direito à saúde (Art. 32 Const.): o atendimento urgente pertence a todos.' },
-        correct: true,
-        feedback: { it: 'Corretto! Il SSN garantisce le cure di emergenza a tutti i presenti sul territorio italiano, anche ai non residenti e agli stranieri irregolari.', en: 'Correct! The NHS guarantees emergency care to everyone present in Italy, including non-residents and undocumented foreigners.', pt: 'Correto! O SNS garante o atendimento de emergência a todos os presentes no território italiano, incluindo não residentes e estrangeiros irregulares.' }
-      }
+      { text: { it: 'Il pronto soccorso può rifiutare chi non ha residenza.', en: 'The emergency room can refuse those without residency.', pt: 'O pronto-socorro pode recusar quem não tem residência.' }, correct: false, feedback: { it: 'Non corretto. Le cure di emergenza sono garantite a chiunque nel territorio italiano.', en: 'Not correct. Emergency care is guaranteed to everyone in Italy.', pt: 'Não correto. O atendimento de emergência é garantido a todos no território italiano.' } },
+      { text: { it: 'Viola il diritto alla salute (Art. 32 Cost.): le cure urgenti spettano a tutti.', en: 'Violates the right to health (Art. 32 Const.): urgent care belongs to everyone.', pt: 'Viola o direito à saúde (Art. 32 Const.): o atendimento urgente pertence a todos.' }, correct: true, feedback: { it: 'Corretto! Il SSN garantisce le cure di emergenza a tutti i presenti nel territorio italiano.', en: 'Correct! The NHS guarantees emergency care to everyone present in Italy.', pt: 'Correto! O SNS garante o atendimento de emergência a todos no território italiano.' } }
     ],
     rightInvolved: { it: 'Diritto alla salute — Art. 32 Cost. + Art. 35 Carta UE', en: 'Right to health — Art. 32 Const. + Art. 35 EU Charter', pt: 'Direito à saúde — Art. 32 Const. + Art. 35 Carta UE' }
   },
@@ -484,16 +357,8 @@ const scenarios = [
     title: { it: 'Il comune chiude la moschea', en: 'The municipality closes the mosque', pt: 'O município fecha a mesquita' },
     text: { it: 'Un comune emette un\'ordinanza che ordina la chiusura di un luogo di culto islamico senza motivazione giuridica.', en: 'A municipality issues an order closing an Islamic place of worship without legal justification.', pt: 'Um município emite uma portaria que ordena o fechamento de um local de culto islâmico sem justificativa jurídica.' },
     choices: [
-      {
-        text: { it: 'Il comune può limitare i culti non tradizionali per ragioni di ordine pubblico.', en: 'The municipality can restrict non-traditional religions for public order reasons.', pt: 'O município pode restringir cultos não tradicionais por razões de ordem pública.' },
-        correct: false,
-        feedback: { it: 'Non corretto. La libertà di culto è garantita dall\'Art. 19 Cost. a tutte le confessioni religiose.', en: 'Not correct. Freedom of worship is guaranteed by Art. 19 Const. to all religious denominations.', pt: 'Não correto. A liberdade de culto é garantida pelo Art. 19 Const. a todas as confissões religiosas.' }
-      },
-      {
-        text: { it: 'Viola la libertà religiosa (Art. 19 Cost.): tutte le religioni sono ugualmente libere.', en: 'Violates religious freedom (Art. 19 Const.): all religions are equally free.', pt: 'Viola a liberdade religiosa (Art. 19 Const.): todas as religiões são igualmente livres.' },
-        correct: true,
-        feedback: { it: 'Corretto! Tutti hanno diritto di professare liberamente la propria fede religiosa. Limitazioni sono ammesse solo per riti contrari al buon costume.', en: 'Correct! Everyone has the right to freely profess their religious faith. Limitations are only allowed for rites contrary to public morality.', pt: 'Correto! Todos têm direito de professar livremente a própria fé religiosa. Limitações são admitidas apenas para ritos contrários à moral pública.' }
-      }
+      { text: { it: 'Il comune può limitare i culti non tradizionali per ragioni di ordine pubblico.', en: 'The municipality can restrict non-traditional religions for public order reasons.', pt: 'O município pode restringir cultos não tradicionais por razões de ordem pública.' }, correct: false, feedback: { it: 'Non corretto. La libertà di culto è garantita dall\'Art. 19 Cost. a tutte le confessioni religiose.', en: 'Not correct. Freedom of worship is guaranteed by Art. 19 Const. to all religious denominations.', pt: 'Não correto. A liberdade de culto é garantida pelo Art. 19 Const. a todas as confissões religiosas.' } },
+      { text: { it: 'Viola la libertà religiosa (Art. 19 Cost.): tutte le religioni sono ugualmente libere.', en: 'Violates religious freedom (Art. 19 Const.): all religions are equally free.', pt: 'Viola a liberdade religiosa (Art. 19 Const.): todas as religiões são igualmente livres.' }, correct: true, feedback: { it: 'Corretto! Tutti hanno diritto di professare liberamente la propria fede religiosa.', en: 'Correct! Everyone has the right to freely profess their religious faith.', pt: 'Correto! Todos têm direito de professar livremente a própria fé religiosa.' } }
     ],
     rightInvolved: { it: 'Libertà religiosa — Art. 19 Cost. + Art. 10 Carta UE', en: 'Religious freedom — Art. 19 Const. + Art. 10 EU Charter', pt: 'Liberdade religiosa — Art. 19 Const. + Art. 10 Carta UE' }
   },
@@ -501,22 +366,14 @@ const scenarios = [
     title: { it: 'Il rifiuto della dichiarazione dei redditi', en: 'Refusing to file a tax return', pt: 'A recusa de declarar o imposto de renda' },
     text: { it: 'Un cittadino decide di non dichiarare parte del suo reddito all\'Agenzia delle Entrate, ritenendo le tasse ingiuste.', en: 'A citizen decides not to declare part of their income to the tax authority, believing taxes are unjust.', pt: 'Um cidadão decide não declarar parte da sua renda à autoridade fiscal, considerando os impostos injustos.' },
     choices: [
-      {
-        text: { it: 'È una scelta personale: ognuno decide quanto pagare.', en: 'It is a personal choice: everyone decides how much to pay.', pt: 'É uma escolha pessoal: cada um decide quanto pagar.' },
-        correct: false,
-        feedback: { it: 'Non corretto. Il pagamento delle imposte è un dovere costituzionale (Art. 53 Cost.), non una scelta facoltativa.', en: 'Not correct. Paying taxes is a constitutional duty (Art. 53 Const.), not an optional choice.', pt: 'Não correto. O pagamento de impostos é um dever constitucional (Art. 53 Const.), não uma escolha facultativa.' }
-      },
-      {
-        text: { it: 'Viola il dovere tributario (Art. 53 Cost.): tutti devono contribuire in base alla capacità contributiva.', en: 'Violates the tax duty (Art. 53 Const.): everyone must contribute based on their ability to pay.', pt: 'Viola o dever tributário (Art. 53 Const.): todos devem contribuir de acordo com a capacidade contributiva.' },
-        correct: true,
-        feedback: { it: 'Corretto! L\'Art. 53 Cost. stabilisce che tutti devono concorrere alle spese pubbliche secondo la capacità contributiva. L\'evasione danneggia l\'intera collettività.', en: 'Correct! Art. 53 Const. states that everyone must contribute to public expenditure according to their ability to pay. Tax evasion harms the entire community.', pt: 'Correto! O Art. 53 Const. estabelece que todos devem contribuir para as despesas públicas segundo a capacidade contributiva. A sonegação prejudica toda a coletividade.' }
-      }
+      { text: { it: 'È una scelta personale: ognuno decide quanto pagare.', en: 'It is a personal choice: everyone decides how much to pay.', pt: 'É uma escolha pessoal: cada um decide quanto pagar.' }, correct: false, feedback: { it: 'Non corretto. Il pagamento delle imposte è un dovere costituzionale (Art. 53 Cost.), non una scelta facoltativa.', en: 'Not correct. Paying taxes is a constitutional duty (Art. 53 Const.), not an optional choice.', pt: 'Não correto. O pagamento de impostos é um dever constitucional (Art. 53 Const.), não uma escolha facultativa.' } },
+      { text: { it: 'Viola il dovere tributario (Art. 53 Cost.): tutti devono contribuire in base alla capacità contributiva.', en: 'Violates the tax duty (Art. 53 Const.): everyone must contribute based on their ability to pay.', pt: 'Viola o dever tributário (Art. 53 Const.): todos devem contribuir de acordo com a capacidade contributiva.' }, correct: true, feedback: { it: 'Corretto! L\'Art. 53 Cost. stabilisce che tutti devono concorrere alle spese pubbliche. L\'evasione danneggia la collettività.', en: 'Correct! Art. 53 Const. states that everyone must contribute to public expenditure. Tax evasion harms the entire community.', pt: 'Correto! O Art. 53 Const. estabelece que todos devem contribuir para as despesas públicas. A sonegação prejudica toda a coletividade.' } }
     ],
     rightInvolved: { it: 'Dovere fiscale — Art. 53 Cost.', en: 'Tax duty — Art. 53 Const.', pt: 'Dever fiscal — Art. 53 Const.' }
   }
 ];
 
-// ---------- GIOCO DIRITTI/DOVERI ----------
+// ---------- GIOCO ----------
 const gameCards = [
   { id: 'g1', text: { it: 'Votare alle elezioni', en: 'Vote in elections', pt: 'Votar nas eleições' }, type: 'right', note: { it: 'Art. 48 — diritto di voto', en: 'Art. 48 — right to vote', pt: 'Art. 48 — direito ao voto' } },
   { id: 'g2', text: { it: 'Pagare le imposte', en: 'Pay taxes', pt: 'Pagar impostos' }, type: 'duty', note: { it: 'Art. 53 — dovere fiscale', en: 'Art. 53 — tax duty', pt: 'Art. 53 — dever fiscal' } },
@@ -528,7 +385,9 @@ const gameCards = [
   { id: 'g8', text: { it: 'Difendere la patria', en: 'Defend the homeland', pt: 'Defender a pátria' }, type: 'duty', note: { it: 'Art. 52 — difesa della patria', en: 'Art. 52 — defence of the homeland', pt: 'Art. 52 — defesa da pátria' } }
 ];
 
-// ---------- QUIZ ----------
+// ---------- QUIZ (20 domande) ----------
+// Ogni domanda ha: q (testo), options (4 opzioni), correct (indice 0-3 dell'opzione corretta), feedback.
+// La posizione della risposta corretta viene mescolata dinamicamente da app.js.
 const quizQuestions = [
   {
     q: { it: 'Quando è entrata in vigore la Costituzione italiana?', en: 'When did the Italian Constitution come into force?', pt: 'Quando entrou em vigor a Constituição italiana?' },
@@ -539,7 +398,7 @@ const quizQuestions = [
       { it: '1° gennaio 1950', en: '1 January 1950', pt: '1° de janeiro de 1950' }
     ],
     correct: 0,
-    feedback: { it: 'La Costituzione fu approvata il 22 dicembre 1947 ed è entrata in vigore il 1° gennaio 1948.', en: 'The Constitution was approved on 22 December 1947 and came into force on 1 January 1948.', pt: 'A Constituição foi aprovada em 22 de dezembro de 1947 e entrou em vigor em 1° de janeiro de 1948.' }
+    feedback: { it: 'La Costituzione fu approvata il 22 dicembre 1947 ed entrata in vigore il 1° gennaio 1948.', en: 'The Constitution was approved on 22 December 1947 and came into force on 1 January 1948.', pt: 'A Constituição foi aprovada em 22 de dezembro de 1947 e entrou em vigor em 1° de janeiro de 1948.' }
   },
   {
     q: { it: 'Quale articolo della Costituzione sancisce il principio di uguaglianza?', en: 'Which article of the Constitution enshrines the principle of equality?', pt: 'Qual artigo da Constituição consagra o princípio da igualdade?' },
@@ -561,10 +420,10 @@ const quizQuestions = [
       { it: 'Il Trattato di Roma (1957)', en: 'The Treaty of Rome (1957)', pt: 'O Tratado de Roma (1957)' }
     ],
     correct: 2,
-    feedback: { it: 'La Carta fu proclamata nel 2000 ma ha acquisito forza giuridica vincolante con il Trattato di Lisbona nel 2009.', en: 'The Charter was proclaimed in 2000 but acquired binding legal force with the Treaty of Lisbon in 2009.', pt: 'A Carta foi proclamada em 2000 mas adquiriu força jurídica vinculante com o Tratado de Lisboa em 2009.' }
+    feedback: { it: 'La Carta fu proclamata nel 2000 ma ha acquisito forza vincolante con il Trattato di Lisbona nel 2009.', en: 'The Charter was proclaimed in 2000 but acquired binding legal force with the Treaty of Lisbon in 2009.', pt: 'A Carta foi proclamada em 2000 mas adquiriu força vinculante com o Tratado de Lisboa em 2009.' }
   },
   {
-    q: { it: 'Quale principio stabilisce che chi guadagna di più deve contribuire proporzionalmente di più alle spese pubbliche?', en: 'Which principle establishes that those who earn more must contribute proportionally more to public expenditure?', pt: 'Qual princípio estabelece que quem ganha mais deve contribuir proporcionalmente mais para as despesas públicas?' },
+    q: { it: 'Quale principio stabilisce che chi guadagna di più contribuisce proporzionalmente di più alle spese pubbliche?', en: 'Which principle establishes that those who earn more must contribute proportionally more to public expenditure?', pt: 'Qual princípio estabelece que quem ganha mais deve contribuir proporcionalmente mais para as despesas públicas?' },
     options: [
       { it: 'Principio di uguaglianza formale', en: 'Principle of formal equality', pt: 'Princípio da igualdade formal' },
       { it: 'Principio di progressività fiscale', en: 'Principle of fiscal progressivity', pt: 'Princípio da progressividade fiscal' },
@@ -572,7 +431,7 @@ const quizQuestions = [
       { it: 'Principio di sussidiarietà', en: 'Principle of subsidiarity', pt: 'Princípio da subsidiariedade' }
     ],
     correct: 1,
-    feedback: { it: 'L\'Art. 53 Cost. stabilisce il principio di progressività: il sistema tributario è calibrato sulla capacità contributiva di ciascuno.', en: 'Art. 53 Const. establishes the principle of progressivity: the tax system is calibrated on each person\'s ability to pay.', pt: 'O Art. 53 Const. estabelece o princípio da progressividade: o sistema tributário é calibrado na capacidade contributiva de cada um.' }
+    feedback: { it: 'L\'Art. 53 Cost. stabilisce il principio di progressività: il sistema tributario è calibrato sulla capacità contributiva.', en: 'Art. 53 Const. establishes the principle of progressivity: the tax system is calibrated on each person\'s ability to pay.', pt: 'O Art. 53 Const. estabelece o princípio da progressividade: o sistema tributário é calibrado na capacidade contributiva de cada um.' }
   },
   {
     q: { it: 'In quanti titoli è suddivisa la Carta dei diritti fondamentali dell\'UE?', en: 'Into how many titles is the EU Charter of Fundamental Rights divided?', pt: 'Em quantos títulos está dividida a Carta dos Direitos Fundamentais da UE?' },
@@ -602,7 +461,7 @@ const quizQuestions = [
       { it: 'Ammessa per ragioni di ordine pubblico', en: 'Allowed for public order reasons', pt: 'Permitida por razões de ordem pública' },
       { it: 'Vietata dalla Costituzione', en: 'Prohibited by the Constitution', pt: 'Proibida pela Constituição' },
       { it: 'Ammessa solo in tempo di guerra', en: 'Allowed only in time of war', pt: 'Permitida apenas em tempo de guerra' },
-      { it: 'Regolata dal governo', en: 'Regulated by the government', pt: 'Regulada pelo governo' }
+      { it: 'Regolata dal governo di turno', en: 'Regulated by the incumbent government', pt: 'Regulada pelo governo em exercício' }
     ],
     correct: 1,
     feedback: { it: 'L\'Art. 21 Cost. vieta espressamente la censura preventiva: la stampa non può essere soggetta ad autorizzazioni o censure.', en: 'Art. 21 Const. expressly prohibits prior censorship: the press cannot be subject to authorisations or censorship.', pt: 'O Art. 21 Const. proíbe expressamente a censura prévia: a imprensa não pode ser sujeita a autorizações ou censura.' }
@@ -627,7 +486,7 @@ const quizQuestions = [
       { it: 'Eliminare le differenze culturali', en: 'Eliminate cultural differences', pt: 'Eliminar as diferenças culturais' }
     ],
     correct: 1,
-    feedback: { it: 'L\'Art. 3, comma 2 Cost. impone alla Repubblica di rimuovere gli ostacoli di ordine economico e sociale che limitano la libertà e l\'uguaglianza dei cittadini.', en: 'Art. 3, para. 2 Const. requires the Republic to remove economic and social obstacles that limit citizens\' freedom and equality.', pt: 'O Art. 3, § 2 Const. impõe à República remover os obstáculos de ordem econômica e social que limitam a liberdade e a igualdade dos cidadãos.' }
+    feedback: { it: 'L\'Art. 3, comma 2 Cost. impone alla Repubblica di rimuovere gli ostacoli di ordine economico e sociale che limitano libertà e uguaglianza.', en: 'Art. 3, para. 2 Const. requires the Republic to remove economic and social obstacles that limit citizens\' freedom and equality.', pt: 'O Art. 3, § 2 Const. impõe à República remover os obstáculos de ordem econômica e social que limitam a liberdade e a igualdade dos cidadãos.' }
   },
   {
     q: { it: 'Il diritto alla salute (Art. 32 Cost.) garantisce cure di emergenza:', en: 'The right to health (Art. 32 Const.) guarantees emergency care:', pt: 'O direito à saúde (Art. 32 Const.) garante atendimento de emergência:' },
@@ -638,6 +497,117 @@ const quizQuestions = [
       { it: 'Solo a chi ha un reddito sotto la soglia di povertà', en: 'Only to those with income below the poverty threshold', pt: 'Apenas a quem tem renda abaixo do limiar de pobreza' }
     ],
     correct: 2,
-    feedback: { it: 'Le cure di emergenza sono garantite a chiunque si trovi nel territorio italiano, indipendentemente da cittadinanza, residenza o condizione documentale.', en: 'Emergency care is guaranteed to anyone in Italian territory, regardless of citizenship, residency or documentation status.', pt: 'O atendimento de emergência é garantido a qualquer pessoa no território italiano, independentemente de cidadania, residência ou situação documental.' }
+    feedback: { it: 'Le cure di emergenza sono garantite a chiunque si trovi nel territorio italiano, indipendentemente da cittadinanza o documenti.', en: 'Emergency care is guaranteed to anyone in Italian territory, regardless of citizenship or documentation status.', pt: 'O atendimento de emergência é garantido a qualquer pessoa no território italiano, independentemente de cidadania ou documentos.' }
+  },
+  // ----- DOMANDE 11-20 (nuove) -----
+  {
+    q: { it: 'Chi è il Capo dello Stato nella Repubblica italiana?', en: 'Who is the Head of State in the Italian Republic?', pt: 'Quem é o Chefe de Estado na República italiana?' },
+    options: [
+      { it: 'Il Presidente del Consiglio dei ministri', en: 'The President of the Council of Ministers', pt: 'O Presidente do Conselho de Ministros' },
+      { it: 'Il Presidente della Repubblica', en: 'The President of the Republic', pt: 'O Presidente da República' },
+      { it: 'Il Presidente della Corte Costituzionale', en: 'The President of the Constitutional Court', pt: 'O Presidente da Corte Constitucional' },
+      { it: 'Il Presidente del Senato', en: 'The President of the Senate', pt: 'O Presidente do Senado' }
+    ],
+    correct: 1,
+    feedback: { it: 'Il Presidente della Repubblica è il Capo dello Stato e rappresenta l\'unità nazionale (Art. 87 Cost.).', en: 'The President of the Republic is the Head of State and represents national unity (Art. 87 Const.).', pt: 'O Presidente da República é o Chefe de Estado e representa a unidade nacional (Art. 87 Const.).' }
+  },
+  {
+    q: { it: 'Cosa si intende per "rigidità" della Costituzione italiana?', en: 'What is meant by the "rigidity" of the Italian Constitution?', pt: 'O que se entende por "rigidez" da Constituição italiana?' },
+    options: [
+      { it: 'Non può essere modificata in nessun caso', en: 'It cannot be amended under any circumstances', pt: 'Não pode ser alterada em nenhuma hipótese' },
+      { it: 'Può essere modificata solo con referendum', en: 'It can only be amended by referendum', pt: 'Só pode ser alterada por referendo' },
+      { it: 'Non può essere modificata con una legge ordinaria, ma richiede un procedimento aggravato', en: 'It cannot be modified by ordinary law but requires a more complex procedure', pt: 'Não pode ser modificada por lei ordinária, mas exige um procedimento agravado' },
+      { it: 'Può essere modificata solo dal Presidente della Repubblica', en: 'It can only be amended by the President of the Republic', pt: 'Só pode ser alterada pelo Presidente da República' }
+    ],
+    correct: 2,
+    feedback: { it: 'La rigidità costituzionale (Art. 138 Cost.) significa che le modifiche richiedono un procedimento parlamentare rafforzato, con doppia approvazione di entrambe le Camere.', en: 'Constitutional rigidity (Art. 138 Const.) means that amendments require a reinforced parliamentary procedure, with double approval by both Chambers.', pt: 'A rigidez constitucional (Art. 138 Const.) significa que as alterações exigem um procedimento parlamentar reforçado, com dupla aprovação de ambas as Câmaras.' }
+  },
+  {
+    q: { it: 'Quale organo ha il compito esclusivo di giudicare la legittimità costituzionale delle leggi in Italia?', en: 'Which body has the exclusive task of judging the constitutional legitimacy of laws in Italy?', pt: 'Qual órgão tem a tarefa exclusiva de julgar a legitimidade constitucional das leis na Itália?' },
+    options: [
+      { it: 'Il Consiglio di Stato', en: 'The Council of State', pt: 'O Conselho de Estado' },
+      { it: 'La Corte di Cassazione', en: 'The Court of Cassation', pt: 'O Tribunal de Cassação' },
+      { it: 'La Corte Costituzionale', en: 'The Constitutional Court', pt: 'A Corte Constitucional' },
+      { it: 'Il Parlamento in seduta comune', en: 'Parliament in joint session', pt: 'O Parlamento em sessão conjunta' }
+    ],
+    correct: 2,
+    feedback: { it: 'La Corte Costituzionale (Art. 134 Cost.) è l\'organo che giudica la conformità delle leggi alla Costituzione.', en: 'The Constitutional Court (Art. 134 Const.) is the body that judges the conformity of laws with the Constitution.', pt: 'A Corte Constitucional (Art. 134 Const.) é o órgão que julga a conformidade das leis com a Constituição.' }
+  },
+  {
+    q: { it: 'L\'Art. 52 della Costituzione italiana sancisce:', en: 'Art. 52 of the Italian Constitution enshrines:', pt: 'O Art. 52 da Constituição italiana consagra:' },
+    options: [
+      { it: 'Il diritto di sciopero', en: 'The right to strike', pt: 'O direito de greve' },
+      { it: 'La libertà di associazione', en: 'Freedom of association', pt: 'A liberdade de associação' },
+      { it: 'Il dovere di difesa della Patria', en: 'The duty to defend the Homeland', pt: 'O dever de defesa da Pátria' },
+      { it: 'Il diritto all\'istruzione', en: 'The right to education', pt: 'O direito à educação' }
+    ],
+    correct: 2,
+    feedback: { it: 'L\'Art. 52 Cost. afferma che la difesa della Patria è sacro dovere del cittadino.', en: 'Art. 52 Const. states that the defence of the Homeland is a sacred duty of the citizen.', pt: 'O Art. 52 Const. afirma que a defesa da Pátria é dever sagrado do cidadão.' }
+  },
+  {
+    q: { it: 'L\'Italia è diventata una Repubblica con il referendum del:', en: 'Italy became a Republic with the referendum of:', pt: 'A Itália tornou-se uma República com o referendo de:' },
+    options: [
+      { it: '25 aprile 1945', en: '25 April 1945', pt: '25 de abril de 1945' },
+      { it: '2 giugno 1946', en: '2 June 1946', pt: '2 de junho de 1946' },
+      { it: '1° gennaio 1948', en: '1 January 1948', pt: '1° de janeiro de 1948' },
+      { it: '18 aprile 1948', en: '18 April 1948', pt: '18 de abril de 1948' }
+    ],
+    correct: 1,
+    feedback: { it: 'Il 2 giugno 1946 gli italiani votarono per referendum istituzionale scegliendo la Repubblica al posto della Monarchia.', en: 'On 2 June 1946, Italians voted in an institutional referendum choosing the Republic over the Monarchy.', pt: 'Em 2 de junho de 1946, os italianos votaram em referendo institucional escolhendo a República em vez da Monarquia.' }
+  },
+  {
+    q: { it: 'La Carta dei diritti fondamentali dell\'UE si applica agli Stati membri:', en: 'The EU Charter of Fundamental Rights applies to member states:', pt: 'A Carta dos Direitos Fundamentais da UE aplica-se aos Estados membros:' },
+    options: [
+      { it: 'Sempre e in ogni situazione', en: 'Always and in every situation', pt: 'Sempre e em qualquer situação' },
+      { it: 'Solo quando attuano il diritto dell\'Unione europea', en: 'Only when implementing European Union law', pt: 'Apenas quando implementam o direito da União Europeia' },
+      { it: 'Solo in materia penale', en: 'Only in criminal matters', pt: 'Apenas em matéria penal' },
+      { it: 'Solo nei confronti dei cittadini UE', en: 'Only towards EU citizens', pt: 'Apenas em relação aos cidadãos da UE' }
+    ],
+    correct: 1,
+    feedback: { it: 'Ai sensi dell\'Art. 51 della Carta UE, le disposizioni si applicano agli Stati membri esclusivamente nell\'attuazione del diritto dell\'Unione.', en: 'Under Art. 51 of the EU Charter, its provisions apply to member states exclusively when implementing Union law.', pt: 'Nos termos do Art. 51 da Carta UE, as disposições aplicam-se aos Estados membros exclusivamente quando implementam o direito da União.' }
+  },
+  {
+    q: { it: 'Quale articolo della Costituzione tutela la libertà di domicilio?', en: 'Which article of the Constitution protects freedom of domicile?', pt: 'Qual artigo da Constituição protege a liberdade de domicílio?' },
+    options: [
+      { it: 'Art. 13', en: 'Art. 13', pt: 'Art. 13' },
+      { it: 'Art. 14', en: 'Art. 14', pt: 'Art. 14' },
+      { it: 'Art. 15', en: 'Art. 15', pt: 'Art. 15' },
+      { it: 'Art. 16', en: 'Art. 16', pt: 'Art. 16' }
+    ],
+    correct: 1,
+    feedback: { it: 'L\'Art. 14 Cost. dichiara il domicilio inviolabile: le ispezioni, perquisizioni e sequestri sono ammessi solo nei casi e modi previsti dalla legge.', en: 'Art. 14 Const. declares the home inviolable: inspections, searches and seizures are only allowed in cases and ways provided by law.', pt: 'O Art. 14 Const. declara o domicílio inviolável: inspeções, buscas e apreensões só são admitidas nos casos e modos previstos em lei.' }
+  },
+  {
+    q: { it: 'Il principio di presunzione di innocenza significa che:', en: 'The principle of presumption of innocence means that:', pt: 'O princípio da presunção de inocência significa que:' },
+    options: [
+      { it: 'L\'imputato non può essere mai condannato', en: 'The accused can never be convicted', pt: 'O acusado nunca pode ser condenado' },
+      { it: 'L\'imputato è considerato innocente fino a condanna definitiva', en: 'The accused is considered innocent until final conviction', pt: 'O acusado é considerado inocente até a condenação definitiva' },
+      { it: 'La polizia non può arrestare nessuno', en: 'The police cannot arrest anyone', pt: 'A polícia não pode prender ninguém' },
+      { it: 'Il processo penale è sempre pubblico', en: 'Criminal proceedings are always public', pt: 'O processo penal é sempre público' }
+    ],
+    correct: 1,
+    feedback: { it: 'L\'Art. 27 Cost. e l\'Art. 48 Carta UE stabiliscono che nessuno può essere considerato colpevole fino a sentenza definitiva di condanna.', en: 'Art. 27 Const. and Art. 48 EU Charter establish that no one can be considered guilty until a final conviction.', pt: 'O Art. 27 Const. e o Art. 48 Carta UE estabelecem que ninguém pode ser considerado culpado até condenação definitiva.' }
+  },
+  {
+    q: { it: 'Quanti Stati membri fanno attualmente parte dell\'Unione europea?', en: 'How many member states are currently part of the European Union?', pt: 'Quantos Estados membros fazem atualmente parte da União Europeia?' },
+    options: [
+      { it: '25', en: '25', pt: '25' },
+      { it: '27', en: '27', pt: '27' },
+      { it: '28', en: '28', pt: '28' },
+      { it: '30', en: '30', pt: '30' }
+    ],
+    correct: 1,
+    feedback: { it: 'Dal 2020, dopo l\'uscita del Regno Unito (Brexit), l\'Unione europea conta 27 Stati membri.', en: 'Since 2020, following the United Kingdom\'s exit (Brexit), the European Union has 27 member states.', pt: 'Desde 2020, após a saída do Reino Unido (Brexit), a União Europeia conta com 27 Estados membros.' }
+  },
+  {
+    q: { it: 'Quale articolo della Costituzione italiana sancisce il diritto di riunione?', en: 'Which article of the Italian Constitution enshrines the right of assembly?', pt: 'Qual artigo da Constituição italiana consagra o direito de reunião?' },
+    options: [
+      { it: 'Art. 15', en: 'Art. 15', pt: 'Art. 15' },
+      { it: 'Art. 17', en: 'Art. 17', pt: 'Art. 17' },
+      { it: 'Art. 19', en: 'Art. 19', pt: 'Art. 19' },
+      { it: 'Art. 21', en: 'Art. 21', pt: 'Art. 21' }
+    ],
+    correct: 1,
+    feedback: { it: 'L\'Art. 17 Cost. garantisce il diritto di riunirsi pacificamente e senz\'armi. Per le riunioni in luogo pubblico è richiesto preavviso alle autorità.', en: 'Art. 17 Const. guarantees the right to assemble peacefully and without arms. For meetings in public places, prior notice to the authorities is required.', pt: 'O Art. 17 Const. garante o direito de se reunir pacificamente e sem armas. Para reuniões em locais públicos, é exigido aviso prévio às autoridades.' }
   }
 ];
